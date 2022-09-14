@@ -11,7 +11,7 @@ jobs:
     environment: nuget
     steps:
       env:
-      SUPER_SECRET: ${{ secrets.NUGET_PAT }}
+        SUPER_SECRET: ${{ secrets.NUGET_PAT }}
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
