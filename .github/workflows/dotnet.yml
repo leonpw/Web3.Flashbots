@@ -22,5 +22,5 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet nuget push "Flashbots/bin/Release/Flashbots.1.0.0.nupkg"  --api-key NUGET_PAT --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push "Flashbots/bin/Debug/Flashbots.1.0.0.nupkg"  --api-key NUGET_PAT --source https://api.nuget.org/v3/index.json
     
