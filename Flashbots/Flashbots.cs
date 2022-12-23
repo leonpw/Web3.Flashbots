@@ -32,7 +32,7 @@ public class Flashbots : IFlashbots
         object[] parameterList = new object[1];
         parameterList[0] = parameterMap;
 
-        var message = new RpcRequestMessage("1", FlashbotApiMethods.eth_sendBundle.ToString(), parameterList);
+        var message = new RpcRequestMessage(1, FlashbotApiMethods.eth_sendBundle.ToString(), parameterList);
 
         var rpcResponseMessage = await Client.SendAsyncPublic(message);
         if (rpcResponseMessage.HasError)
@@ -62,7 +62,7 @@ public class Flashbots : IFlashbots
         object[] parameterList = new object[1];
         parameterList[0] = parameterMap;
 
-        var message = new RpcRequestMessage("1", FlashbotApiMethods.eth_callBundle.ToString(), parameterList);
+        var message = new RpcRequestMessage(1, FlashbotApiMethods.eth_callBundle.ToString(), parameterList);
 
         var rpcResponseMessage = await Client.SendAsyncPublic(message);
 
@@ -99,7 +99,7 @@ public class Flashbots : IFlashbots
         object[] parameterList = new object[1];
         parameterList[0] = parameterMap;
 
-        var message = new RpcRequestMessage("1", FlashbotApiMethods.flashbots_getBundleStats.ToString(), parameterList);
+        var message = new RpcRequestMessage(1, FlashbotApiMethods.flashbots_getBundleStats.ToString(), parameterList);
 
         var rpcResponseMessage = await Client.SendAsyncPublic(message);
         if (rpcResponseMessage.HasError)
@@ -127,7 +127,7 @@ public class Flashbots : IFlashbots
         object[] parameterList = new object[1];
         parameterList[0] = parameterMap;
 
-        var message = new RpcRequestMessage("1", FlashbotApiMethods.flashbots_getUserStats.ToString(), parameterList);
+        var message = new RpcRequestMessage(1, FlashbotApiMethods.flashbots_getUserStats.ToString(), parameterList);
 
         var rpcResponseMessage = await Client.SendAsyncPublic(message);
         if (rpcResponseMessage.HasError)
